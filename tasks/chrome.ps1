@@ -37,7 +37,7 @@ if ($Interleave -eq $true){
 #$CommandOutput = ls $Redirect
 #$CommandOutput =  (New-Object System.Net.WebClient).DownloadFile("https://www.slimjetbrowser.com/chrome/files/${Version}/ChromeStandaloneSetup64.exe","$env:APPDATA\ChromeStandaloneSetup64.exe"); Start-Process("$env:APPDATA\ChromeStandaloneSetup64.exe") -ArgumentList "/silent /install" 2>&1
 #$CommandOutput =  (New-Object System.Net.WebClient).DownloadFile("https://www.slimjetbrowser.com/chrome/files/${Version}/ChromeStandaloneSetup64.exe","c:\Users\Administrator\Downloads\test\ChromeStandaloneSetup641.exe")
-(New-Object System.Net.WebClient).DownloadFile("https://www.slimjetbrowser.com/chrome/files/84.0.4147.13/ChromeStandaloneSetup64.exe","$env:APPDATA\ChromeStandaloneSetup64.exe"); Start-Process("$env:APPDATA\ChromeStandaloneSetup64.exe") -ArgumentList "/silent /install" 2>&1
+(New-Object System.Net.WebClient).DownloadFile("https://www.slimjetbrowser.com/chrome/files/${Version}/ChromeStandaloneSetup64.exe","$env:APPDATA\ChromeStandaloneSetup64.exe"); Start-Process("$env:APPDATA\ChromeStandaloneSetup64.exe") -ArgumentList "/silent /install" 2>&1
 #$Command = "powershell -command (New-Object System.Net.WebClient).DownloadFile('https://www.slimjetbrowser.com/chrome/files/${Version}/ChromeStandaloneSetup64.exe',\"$env:APPDATA\\ChromeStandaloneSetup64.exe\"); Start-Process(\"$env:APPDATA\ChromeStandaloneSetup64.exe\") -ArgumentList \"/silent /install\""
 $CommandOutput = cmd /c powershell ls $Redirect
 if ($LASTEXITCODE -eq 0){
