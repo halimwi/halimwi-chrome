@@ -34,7 +34,7 @@ if ($Interleave -eq $true){
     $Redirect = "2>&1"
 }
 
-$CommandOutput =  (New-Object System.Net.WebClient).DownloadFile("https://www.slimjetbrowser.com/chrome/files/$Version/ChromeStandaloneSetup64.exe","$env:APPDATA\ChromeStandaloneSetup64.exe"); Start-Process("$env:APPDATA\ChromeStandaloneSetup64.exe") -ArgumentList "/silent /install" $Redirect
+$CommandOutput =  (New-Object System.Net.WebClient).DownloadFile("https://www.slimjetbrowser.com/chrome/files/$Version/ChromeStandaloneSetup64.exe","$env:APPDATA\ChromeStandaloneSetup64.exe"); Start-Process("$env:APPDATA\ChromeStandaloneSetup64.exe") -ArgumentList "/silent /install" 2>&1
 if ($LASTEXITCODE -eq 0){
     echo $CommandOutput
 }
