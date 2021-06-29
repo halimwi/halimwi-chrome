@@ -36,7 +36,7 @@ if ($Interleave -eq $true){
 
 $ChromePath = "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"
 [System.Diagnostics.FileVersionInfo]::GetVersionInfo($ChromePath).ProductVersion
-
+$CommandOutput = cmd /c echo "Command has been executed" $Redirect
 if ($LASTEXITCODE -eq 0){
     #echo $CommandOutput
     echo "Command has been executed"
