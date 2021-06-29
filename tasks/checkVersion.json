@@ -1,0 +1,6 @@
+{
+    "description": "Check Google Chrome version",
+    "private": true,
+    "input_method": "powershell"
+}
+  
