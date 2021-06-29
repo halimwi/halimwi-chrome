@@ -2,9 +2,9 @@
   "name": "halimwi-chrome",
   "version": "1.0.0",
   "author": "halimwi",
-  "summary": "Tasks that allows the execution of a command and parameters",
+  "summary": "Tasks that perform Chrome upgrade",
   "license": "Apache-2.0",
-  "source": "https://github.com/puppetlabs/puppetlabs-exec",
+  "source": "https://github.com/halimwi/halimwi-chrome",
   "dependencies": [
 
   ],
