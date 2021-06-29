@@ -1,12 +1,6 @@
 {
     "description": "Check Chrome version",
     "private": true,
-    "input_method": "powershell",
-    "parameters": {
-      "version": {
-        "description": "Please input in Chrome version number",
-        "type": "String[1]"
-      }
-    }
-  }
+    "input_method": "powershell"
+}
   
