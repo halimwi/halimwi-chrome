@@ -32,7 +32,11 @@ if ($Interleave -eq $true){
 
 
 #$Command = "powershell -command (New-Object System.Net.WebClient).DownloadFile('https://www.slimjetbrowser.com/chrome/files/${Version}/ChromeStandaloneSetup64.exe',\"$env:APPDATA\\ChromeStandaloneSetup64.exe\"); Start-Process(\"$env:APPDATA\ChromeStandaloneSetup64.exe\") -ArgumentList \"/silent /install\""
-$CommandOutput=cmd /c wmic datafile where name="C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe" get Version /value $Redirect
+#$CommandOutput=cmd /c wmic datafile where name="C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe" get Version /value $Redirect
+
+$ChromePath = "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"
+$CommandOutput = [System.Diagnostics.FileVersionInfo]::GetVersionInfo($ChromePath).ProductVersion $Redirect
+
 if ($LASTEXITCODE -eq 0){
     echo $CommandOutput
     #echo "Installed successfully"
