@@ -35,7 +35,7 @@ if ($Interleave -eq $true){
 #$CommandOutput=cmd /c wmic datafile where name="C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe" get Version /value $Redirect
 
 $ChromePath = "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"
-$CommandOutput = [System.Diagnostics.FileVersionInfo]::GetVersionInfo($ChromePath).ProductVersion $Redirect
+$CommandOutput = [System.Diagnostics.FileVersionInfo]::GetVersionInfo($ChromePath).ProductVersion
 
 if ($LASTEXITCODE -eq 0){
     echo $CommandOutput
