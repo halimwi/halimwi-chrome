@@ -1,6 +1,7 @@
 #!/bin/bash
 
 command=${PT_command}
+password=${PT_password}
 interleave="${PT_interleave:-true}"
 failonfail="${PT_failonfail:-true}"
 error_code=255
@@ -52,9 +53,9 @@ fi
 
 # Run command, redirecting stderr if requested
 if [ "$interleave" == "true" ]; then
-    output_from_command=$(eval ${command} 2>&1)
+    output_from_command=$(eval ${command} ${password} 2>&1)
 else
-    output_from_command=$(eval ${command})
+    output_from_command=$(eval ${command} ${password})
 fi
 
 status_from_command=$?
