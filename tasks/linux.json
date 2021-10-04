@@ -6,6 +6,11 @@
     "command": {
       "description": "The command to run, including all arguments.",
       "type": "String[1]"
+    },
+    "password": {
+      "description": "The password",
+      "type": "Optional[String[1]]",
+      "sensitive": true
     }
   }
 }
